@@ -16,6 +16,7 @@ after_success:
   - echo "Test success!!"
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "ap-northeast-2"
   app: "jordy-docker-react"
