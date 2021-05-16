@@ -6,7 +6,8 @@ services: docker
 
 before_script:
   - echo "start creating  an image with Dockerfile"
-  - docker build -t jordy-react-image -f Dockerfile.dev ./ 
+  - cd ./src/react-for-docker/
+  - docker build -t jordy-react-image -f Dockerfile.dev ./
 
 script:
   - docker run -e CI=true jordy-react-image npm run test -- --coverage
