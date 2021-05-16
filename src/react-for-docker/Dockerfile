@@ -14,4 +14,10 @@ COPY ./ ./
 
 CMD ["npm","run","start"]
 
+# 운영용 Nginx 이미지
+FROM nginx
+
+EXPOSE 80
+
+COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 
