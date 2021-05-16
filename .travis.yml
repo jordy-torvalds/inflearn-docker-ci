@@ -14,3 +14,15 @@ script:
 
 after_success:
   - echo "Test success!!"
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "jordy-docker-react"
+  env: "Jordydockerreact-env"
+  bucket_name: elasticbeanstalk-ap-northeast-2-777582115357
+  bucket_path: jordy-docker-react
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
