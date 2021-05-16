@@ -12,7 +12,7 @@ RUN npm install
 
 COPY ./ ./
 
-CMD ["npm","run","build"]
+RUN ["npm","run","build"]
 
 # 운영용 Nginx 이미지
 FROM nginx
