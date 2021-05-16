@@ -1,5 +1,5 @@
 # 사용 백그라운드 이미지
-FROM node:alpine
+FROM node:alpine AS builder
 
 # 작업 폴더 이동 / -> /usr/src/app
 WORKDIR /usr/src/app
